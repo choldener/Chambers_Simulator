@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Guardians Trainer</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8"/>
+</head>
+
+<body onload="StartSim()">
+<div class="center-wrapper-parent">
+	<div class="canvas-wrapper">
+		<p align='Center' id="olm_attack_style"></p>
+		<p align='Center' id="user_health"></p>
+		<p align='Center' id="user_prayer"></p>
+
+		<p align="center">
+			<button onclick="MagePray()"><img src="MagePray.png"></button>
+			<button onclick="DrinkAid()"><img src="aid.png"></button>
+			<button onclick="RangePray()"><img src="RangePray.png"></button>
+		</p>
+		<p align="center"></p>
+		<canvas id="olm-fight" tabindex="1"></canvas>
+	</div>
+</div>
+<script type="text/javascript" src='olm.js'"></script>
+</body>
+</html>
