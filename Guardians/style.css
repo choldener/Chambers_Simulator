@@ -1,0 +1,15 @@
+#guards {
+  display: block;
+  margin: 0 auto;
+}
+
+.canvas-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 99%;
+}
+
+.canvas-wrapper-parent {
+  transform-style: preserve-3d;
+}
