@@ -30,6 +30,27 @@ class Point {
 	}
 }
 
+class Player {
+	constructor(pos) {
+        this.position = new Point(pos.x, pos.y);
+        this.prev_pos = new Point(pos.x, pos.y);
+		this.size = 1;
+        this.target_tile = null;        //the tile on which to draw a tile indicator, the next target_tile_server
+        this.target_tile_server = null; //target_tile as seen by the 'server', delayed by ping
+        this.path_tiles = [];           //array of tiles in path to target_tile_server
+        this.attack_target = null;      //the npc being targetted for attack
+        this.focus_angle = null;        //the center point of the player's focus
+        this.animation_frames = [];
+        this.max_hp = 99;
+        this.hp = 99;
+        this.hp_bar = new HpBar(this);
+        this.max_str = 99;
+        this.str = 118;
+        this.attack_cd = 5;             //attack cool-down timer in ticks
+	}
+	
+}
+
 function resize() {
 	let viewport_height = window.innerHeight;
 	let viewport_width = window.innerWidth;
